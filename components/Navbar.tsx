@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react';
 import logo from '../assets/uzo-logo.svg';
 import linkslogo from '../assets/myuzo-icon.png';
 import Image from 'next/image';
