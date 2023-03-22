@@ -23,7 +23,7 @@ function Navbar() {
         <p className='hover:cursor-pointer flex justify-center my-2'><a href="#home">MUDAR PARA A UZO</a></p>
         <p className='hover:cursor-pointer flex justify-center'><a href="#home">NET FIBRA + MÓVEL</a></p>
         <p onClick={handleClick2} className='hover:cursor-pointer mx-20 text-blackk flex justify-center hover:bg-primary mt-3 pb-1 pt-1 pl-5 pr-5'>MÓVEL</p>
-        <p className='hover:cursor-pointer flex justify-center my-2'><a href="#home">AJUDA</a></p>
+        <p className='hover:cursor-pointer flex justify-center my-2'><a href="https://www.uzo.pt/ajuda">AJUDA</a></p>
       </div>
     </div>
   )
@@ -39,7 +39,7 @@ function Navbar() {
   }
 
   const handleClick2 = () => {
-    router.push('/tarif')
+    router.push('/tarifarios')
   }
 
 
@@ -58,16 +58,16 @@ function Navbar() {
         <div className='flex flex-row bg-white  justify-start items-center'>
             
             <div className='max-w-[80px] ml-5'>
-                <Image className='h-10' src={logo} alt="" />
+                <a href="http://localhost:3000"><Image className='h-10' src={logo} alt="" /></a>
             </div>
             
     
             <div className='flex flex-row mr-10 font-secondary font-bold  ml-auto items-center'>
               <div className='flex gap-3 max-md:hidden'>
-                <p className=' hover:cursor-pointer hover:bg-primary px-5 py-1'><a href="#home">MUDAR PARA A UZO</a></p>
-                <p className='hover:cursor-pointer hover:bg-primary px-5 py-1'><a href="#home">NET FIBRA + MÓVEL</a></p>
+                <p className=' hover:cursor-pointer hover:bg-primary px-5 py-1'><a href="https://www.uzo.pt/mudar-para-uzo">MUDAR PARA A UZO</a></p>
+                <p className='hover:cursor-pointer hover:bg-primary px-5 py-1'><a href="https://www.uzo.pt/net-fibra-movel">NET FIBRA + MÓVEL</a></p>
                 <p onClick={handleClick2} className='hover:cursor-pointer hover:bg-primary px-5 py-1'>MÓVEL</p>
-                <p className='hover:cursor-pointer hover:bg-primary px-5 py-1'><a href="#home">AJUDA</a></p>
+                <p className='hover:cursor-pointer hover:bg-primary px-5 py-1'><a href="https://www.uzo.pt/ajuda">AJUDA</a></p>
               </div>
                 
               <Image className='pt-2 ml-8' src={linkslogo} width={70} height={50} alt="logo"/>
