@@ -1,10 +1,8 @@
-import Login from '@/components/Login';
-import { SessionProvider } from '@/components/SessionProvider';
 import Navbar from '@/components/Navbar';
-import { authOptions } from '@/pages/api/auth/[...nextauth]';
+
 import '@/styles/globals.css';
-import { getServerSession } from 'next-auth';
-import { motion } from 'framer-motion';
+
+
 
 export const metadata = {
   title: 'UZO Project',
@@ -16,7 +14,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const session = await getServerSession(authOptions)
+  
 
   return (
     <html lang="en">
@@ -26,11 +24,8 @@ export default async function RootLayout({
       
       </head>
       <body>
-        <SessionProvider session={session}>
-          {/* {!session ? (
-            <Login />
-          ):(
-               */}
+        
+          
             <div className='flex flex-col'>
 
             {/*Client provider notification*/}
@@ -51,7 +46,7 @@ export default async function RootLayout({
           
            
       
-        </SessionProvider>
+        
       </body>
     </html>
   )

@@ -1,7 +1,7 @@
 'use client'
 
 import logo from '../assets/uzo-logo.svg';
-import linkslogo from '../assets/myuzo-icon.png';
+import linkslogo from '@/assets/myuzo-icon.png';
 import Image from 'next/image';
 
 import { useState } from "react";

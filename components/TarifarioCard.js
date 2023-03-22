@@ -3,10 +3,10 @@ import { DevicePhoneMobileIcon, WifiIcon } from "@heroicons/react/24/solid";
 
 
 const TarifarioCard = ({plan}) => {
-    const meucu = String(plan.bannerOffer)
+    const isText = String(plan.bannerOffer)
     var bgColor = 'bg-purple-600'
     
-    if (meucu == 'null'){
+    if (isText == 'null'){
        
         bgColor = 'bg-transparent'
     } else{

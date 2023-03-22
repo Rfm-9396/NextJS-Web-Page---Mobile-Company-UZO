@@ -159,3 +159,8 @@ export const footerVariants = {
     },
   },
 };
+
+export const MenuItemVariants = {
+  hide: { opacity: 0 },
+  show: { opacity: 1 },
+};

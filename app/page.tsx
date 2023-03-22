@@ -1,3 +1,4 @@
+'use client'
 import Banners from '@/components/Banners'
 
 import Image from 'next/image'

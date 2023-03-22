@@ -16,10 +16,6 @@ import { db } from "@/firebase";
 
 
 const Mobile = () => {
-    
-    
-    
-
     const [plans, setPlans] = useState<any>('')
     
 
@@ -28,35 +24,35 @@ const Mobile = () => {
         
 
         const fetchPlans = async () => {
-            const cus: any[] = []
-            const cu = await getDocs(q)
+            const initialPlans: any[] = []
+            const plansDocs = await getDocs(q)
             
             /*  */
-            cu.forEach((doc)=>
-                cus.push(doc.data())
+            plansDocs.forEach((doc)=>
+                initialPlans.push(doc.data())
             )
 
             
-            const cusdemerdas = cus.filter(cu => cu.price != 'fuckyou')
+            const fetchedPlans = initialPlans.filter(cu => cu.price != 'fuckyou')
             
-            setPlans(cusdemerdas)
+            setPlans(fetchedPlans)
             
-            const response =  await fetch('http://143.42.20.197:4000/api/users', {mode:'cors'});
+            /* const response =  await fetch('http://143.42.20.197:4000/api/users', {mode:'cors'}); 
             
-            const data = await response.json()
-            .then((r) => {
+             const data = await response.json() 
+                .then((r) => {
                 
-                /* setPlans(r) */
+                setPlans(r)
                 
                 
-            })
+            }) */
             
             
 
             
         }
         fetchPlans()
-    }, [setPlans])
+    }, [])
     
     
 

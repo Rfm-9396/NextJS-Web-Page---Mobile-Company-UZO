@@ -1,15 +1,15 @@
 'use client'
-import Layout from './Layout'
+
 import SaberMais from './SaberMais'
-import { MouseEvent, SetStateAction, useEffect, useState } from 'react'
+import { SetStateAction, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { navVariants, slideIn, textContainer } from '../utils/motion'
+import { AnimatePresence } from 'framer-motion'
+
 
 
 function Banners() {
-  useEffect(()=>{
-    console.log('cu')
-  })
-  
+
   const bannerText01 = (
     <div className='font-secondary'>
       <p className='uppercase px-5 py-2 bg-secondary text-xl font-bold'>novidade</p>
@@ -50,7 +50,7 @@ function Banners() {
     
   
   
-  const [bgBanner, setBgBanner] = useState('bg-banner02')
+  const [bgBanner, setBgBanner] = useState('bg-banner01')
   const [bannerText, setBannerText] = useState(bannerText01)
   
   const [bannerState, setBannerState] = useState([true,false,false,false])
@@ -92,15 +92,31 @@ function Banners() {
   
   
   return (
-    
-    <Layout>
-      <div className="text-white relative">
-        <Layout>
+    <AnimatePresence>
+      <motion.div className="text-white relative"
+      variants={navVariants}
+      initial="hide"
+      animate="show">
+        <AnimatePresence>
           <div className=''>
-            <div className={`${bgBanner} w-[100%] h-[500px] bg-cover bg-center bg-no-repeat relative `}>
-              <div className='absolute top-[25%] left-[5%] '>
-                <Layout>{bannerText}</Layout>
-              </div>
+            <motion.div className={`${bgBanner} w-[100%] h-[500px] bg-cover bg-center bg-no-repeat relative `}
+            key={bgBanner}
+            variants={textContainer}
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -100, opacity: 0 }}>
+              <motion.div className='absolute top-[25%] left-[5%] '
+              key={bgBanner}
+              variants={textContainer}
+              initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -100, opacity: 0 }}>
+              
+                
+                {bannerText}
+                
+                
+              </motion.div>
         
               <div className='flex gap-1 absolute bottom-5 left-10'>
                 {bannerState.map((state, index)=>(
@@ -108,12 +124,12 @@ function Banners() {
                   ))
                 }
               </div>
-            </div>
+            </motion.div>
           </div>
-        </Layout>
-      
-    </div>
-    </Layout>
+        
+          </AnimatePresence>
+    </motion.div>
+    </AnimatePresence>
   )
 }
 
