@@ -22,9 +22,9 @@ const TarifarioCard = ({plan}) => {
                     
                     <p className="font-bold font-primary ml-7 my-3">{plan.data}GB</p>
                     <div className="ml-6 flex flex-row ">
-                        <p className="text-6xl font-bold">€{plan.price}</p>
-                        <p className="font-bold text-4xl">/mês</p>
-                        <div className="ml-auto mr-[15%] self-center">
+                        <p className="text-6xl font-bold max-md:text-5xl">€{plan.price}</p>
+                        <p className="font-bold text-4xl max-md:text-2xl">/mês</p>
+                        <div className="ml-auto mr-[15%] self-center max-md:mr-5">
                             <button className="bg-primary px-7 py-1 font-semibold text-base">ADERIR</button>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ const TarifarioCard = ({plan}) => {
 
             <div className="my-5 bg-gray-100 flex flex-col py-5 justify-center items-center">
                 <p className="mt-2 font-bold text-3xl text-center">Vantagens de adesão</p>
-                <p className="mt-3 text-center">{plan.onSubscribe}</p>
+                <p className="mt-3 text-center max-md:px-2 max-md:pb-2">{plan.onSubscribe}</p>
                 <EllipsisHorizontalCircleIcon className="w-6"/>
                 
                 

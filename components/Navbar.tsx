@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link';
 import logo from '../assets/uzo-logo.svg';
 import linkslogo from '@/assets/myuzo-icon.png';
 import Image from 'next/image';
@@ -10,7 +10,6 @@ import { useRouter } from 'next/navigation';
 
 function Navbar() {
   const router = useRouter();
-  const [icon, setIcon] = useState('menu')
   const [showHide, setShowHide] = useState(false)
 
   
@@ -53,7 +52,9 @@ function Navbar() {
         <div className='flex flex-row bg-white  justify-start items-center'>
             
             <div className='max-w-[80px] ml-5'>
-                <a href="http://localhost:3000"><Image className='h-10' src={logo} alt="" /></a>
+            <Link href='/'>
+                <Image className='h-10' src={logo} alt="" />
+              </Link>
             </div>
             
     

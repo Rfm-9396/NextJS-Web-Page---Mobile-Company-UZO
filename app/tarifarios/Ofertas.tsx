@@ -53,7 +53,7 @@ function Ofertas() {
     {/* OFERTS 1 */}
 
       <div className="flex flex-col bg-primary justify-center items-center">
-        <p className='font-bold text-3xl py-16'>Escolha mais fácil, não há</p>
+        <p className='font-bold text-3xl py-16 text-center  '>Escolha mais fácil, não há</p>
         <div className=' flex flex-row flex-wrap pb-8'>
           {offerts1.map((offert)=>(
             <OffertCard url={offert.imgUrl} title={offert.title} text={offert.text} key={offert.title}/>
@@ -65,7 +65,7 @@ function Ofertas() {
     {/* OFERTS 2 */}
 
       <div className="flex flex-col bg-gray-100 justify-center items-center">
-        <p className='font-bold text-3xl py-16'>Adere ao débito direto com oferta de 5GB</p>
+        <p className='font-bold text-3xl py-16 text-center max-md:px-10 '>Adere ao débito direto com oferta de 5GB</p>
         <div className="flex flex-row  flex-wrap pb-8">
           {offerts2.map((offert)=>(
             <OffertCard url={offert.imgUrl} title={offert.title} text={offert.text} key={offert.title}/>
@@ -74,10 +74,10 @@ function Ofertas() {
         </div>
       </div>
       <div className="bg-white pt-16 flex flex-col justify-center pb-12">
-            <p className="text-center flex justify-center font-secondary selection:bg-secondary selection:text-white font-bold text-3xl">
+            <p className="max-md:text-2xl max-md:pb-2 text-center flex justify-center font-secondary selection:bg-secondary selection:text-white font-bold text-3xl">
                 Queres ter Internet em casa e no telemóvel ?
             </p>
-            <p className=" text-center flex justify-center font-secondary selection:bg-secondary selection:text-white font-bold text-2xl">
+            <p className="max-md:text-xl text-center flex justify-center font-secondary selection:bg-secondary selection:text-white font-bold text-2xl">
                 A net que queres, sempre contigo
             </p>
         </div>
