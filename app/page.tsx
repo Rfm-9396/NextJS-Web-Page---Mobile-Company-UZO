@@ -1,6 +1,6 @@
 'use client'
 import Banners from '@/components/Banners'
-
+import Link from 'next/link'
 import Image from 'next/image'
 import SaberMais from '@/components/SaberMais'
 import Footer from '@/components/Footer'

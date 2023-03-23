@@ -21,7 +21,7 @@ function Navbar() {
       <div className='uzo__navbar-links_container flex flex-col text-white   font-secondary font-bold '>
         <p className='hover:cursor-pointer flex justify-center my-2'><a href="#home">MUDAR PARA A UZO</a></p>
         <p className='hover:cursor-pointer flex justify-center'><a href="#home">NET FIBRA + MÓVEL</a></p>
-        <p onClick={handleClick2} className='hover:cursor-pointer mx-20 text-blackk flex justify-center hover:bg-primary mt-3 pb-1 pt-1 pl-5 pr-5'>MÓVEL</p>
+        <p onClick={handleClick2} className='hover:cursor-pointer mx-20 flex justify-center hover:bg-primary mt-3 pb-1 pt-1 pl-5 pr-5'>MÓVEL</p>
         <p className='hover:cursor-pointer flex justify-center my-2'><a href="https://www.uzo.pt/ajuda">AJUDA</a></p>
       </div>
     </div>
@@ -29,15 +29,11 @@ function Navbar() {
   const handleClick = () => {
     setShowHide(!showHide);
 
-    if(showHide == false) {
-        setIcon('close')
-    }
-    if(showHide == true) {
-        setIcon('menu')
-    }
+    
   }
 
   const handleClick2 = () => {
+    handleClick()
     router.push('/tarifarios')
   }
 

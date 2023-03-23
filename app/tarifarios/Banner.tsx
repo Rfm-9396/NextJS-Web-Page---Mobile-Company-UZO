@@ -17,8 +17,8 @@ function Banner() {
         <div className="absolute max-sm:hidden text-white top-[20%] w-[45%] h-[60%] justify-center left-1/2 font-bold text-5xl items-center flex">
           <p className="">Na Páscoa caça Gigas!</p>
         </div>
-        <div className="relative pt-5 px-5 sm:hidden text-black  w-full h-[60%] justify-start  font-bold text-4xl items-center flex">
-          <p className="">Na Páscoa caça Gigas!</p>
+        <div className="relative pt-20 px-5 sm:hidden text-black  w-full h-[60%]  font-bold text-4xl  justify-center flex">
+          <p className="text-center">Na Páscoa caça Gigas!</p>
         </div>
         
 
