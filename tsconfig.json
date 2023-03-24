@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "app/tarif/page.tsx"  ],
+, "app/tarif/page.tsx", "context/navbarState.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,4 +1,4 @@
-'use client'
+
 import Banners from '@/components/Banners'
 import Link from 'next/link'
 import Image from 'next/image'

@@ -28,7 +28,7 @@ export default async function RootLayout({
           
             <div className='flex flex-col'>
 
-            {/*Client provider notification*/}
+           
 
             {/*Navbar*/}
             <div>

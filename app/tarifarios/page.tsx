@@ -33,7 +33,7 @@ const Mobile = () => {
             )
 
             
-            const fetchedPlans = initialPlans.filter(cu => cu.price != 'fuckyou')
+            const fetchedPlans = initialPlans.filter(plans => plans)
             
             setPlans(fetchedPlans)
             
